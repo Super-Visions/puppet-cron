@@ -37,7 +37,7 @@ class cron::data
   case $::operatingsystem
   {
     centos, redhat: {
-      $cron_package = 'cronie-anacron'
+      $cron_package = 'cronie'
       $cron_service = 'crond'
     }
     ubuntu, debian: {
