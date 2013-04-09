@@ -31,8 +31,8 @@
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
 class cron::service(
-  $cron_service = hiera('cron_service'),
-  $cron_service_enable = hiera('cron_service_enable')
+  $cron_service = hiera('cron_service', 'crond' ),
+  $cron_service_enable = hiera('cron_service_enable', true)
 )
 {
   service { $cron_service:

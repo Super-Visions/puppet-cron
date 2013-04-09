@@ -27,7 +27,7 @@
 #
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
-class cron::package( $package_name = hiera('cron_package') )
+class cron::package( $package_name = hiera('cron_package', 'cronie') )
 {
   package { $package_name:
       ensure => installed,
